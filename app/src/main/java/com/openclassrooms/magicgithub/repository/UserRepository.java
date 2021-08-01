@@ -7,22 +7,25 @@ import java.util.List;
 
 public class UserRepository {
 
-    private final ApiService apiService; // TODO: A utiliser
+    private final ApiService apiService;
+// Class name = "apiService", type = "ApiService"
+// private = restricted view inside "UserRepository" only
+// private = no inheritance
+// final = ApiService can't be modified
 
     public UserRepository(ApiService apiService) {
         this.apiService = apiService;
     }
 
     public List<User> getUsers() {
-        // TODO: A modifier
-        return null;
+        return this.apiService.getUsers();
     }
 
     public void generateRandomUser() {
-        // TODO: A modifier
+        this.apiService.generateRandomUser();
     }
 
     public void deleteUser(User user) {
-        // TODO: A modifier
+        this.apiService.deleteUser(user);
     }
 }

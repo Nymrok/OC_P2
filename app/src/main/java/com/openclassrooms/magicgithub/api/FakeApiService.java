@@ -7,6 +7,10 @@ import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generat
 public class FakeApiService implements ApiService {
 
     private List<User> users = generateUsers();
+    // Variable "users" type "List<User>"
+    // View restricted inside "FakeApiService" only
+    // List<User> = list that holds elements of "User" type
+    // Variable "users" get "generateUsers()" content from "FakeApiServiceGenerator" class
 
     /**
      * Return a list of {@link User}
@@ -14,8 +18,7 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public List<User> getUsers() {
-        // TODO: A modifier
-        return null;
+        return this.users; // Getter returns public elements that were private
     }
 
     /**
@@ -23,15 +26,15 @@ public class FakeApiService implements ApiService {
      * This user must be get from the {@link FakeApiServiceGenerator#FAKE_USERS_RANDOM} list.
      */
     @Override
-    public void generateRandomUser() {
-        // TODO: A modifier
+    public void generateRandomUser() { // no param ?? because random ?
+        users.add(); // action = "add", what : "user", to : "users"
     }
 
     /**
      * Delete a {@link User} from the {@link FakeApiService#users} list.
      */
     @Override
-    public void deleteUser(User user) {
-        // TODO: A modifier
+    public void deleteUser(User user) { // element : name = "user", type = "User"
+        users.remove(user); // action = "delete", what : "user", to : "users"
     }
 }
