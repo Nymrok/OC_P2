@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public abstract class FakeApiServiceGenerator {
 
-    static List<User> generateUsers() { // Constructeur
+    static List<User> generateUsers() {
         return new ArrayList<>(FAKE_USERS);
     }
 
