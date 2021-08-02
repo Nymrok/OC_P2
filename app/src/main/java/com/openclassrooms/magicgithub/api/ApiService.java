@@ -9,8 +9,3 @@ public interface ApiService {
     void generateRandomUser();
     void deleteUser(User username);
 }
-
-/*
-    All objects that implements this interface
-    Receive all methods and constants that are stated here
-*/

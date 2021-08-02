@@ -8,10 +8,6 @@ import java.util.List;
 public class UserRepository {
 
     private final ApiService apiService;
-// Class name = "apiService", type = "ApiService"
-// private = restricted view inside "UserRepository" only
-// private = no inheritance
-// final = ApiService can't be modified
 
     public UserRepository(ApiService apiService) {
         this.apiService = apiService;
